@@ -1,0 +1,9 @@
+.classpath
+.project
+.scala_dependencies
+.history
+.target
+*.db
+project/boot
+project/plugins/project
+target
