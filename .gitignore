@@ -7,3 +7,5 @@
 project/boot
 project/plugins/project
 target
+lift-sbt-quickstart.sublime-project
+lift-sbt-quickstart.sublime-workspace
