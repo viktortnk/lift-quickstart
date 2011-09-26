@@ -12,6 +12,6 @@ resolvers += {
 
 resolvers += "Web plugin repo" at "http://siasia.github.com/maven2"
 
-addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse" % "1.4.0-RC4")
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse" % "1.4.0")
 
-addSbtPlugin("com.github.siasia" % "xsbt-web-plugin" % "0.1.1")
+addSbtPlugin("com.github.siasia" % "xsbt-web-plugin" % "0.1.2")
