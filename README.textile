@@ -18,4 +18,12 @@ To generate Eclipse project files use _eclipse_
 
 *Have fun!*
 
+h2. Update - added Compass CSS support
 
+In my projects, I often use "Compass":http://www.compass-style.org, so I've added the option to the quickstart project. Use the compass command line or compass.app to generate the files to your taste. However, I've included a config.rb files with some sensible defaults. 
+
+The compass files are stored in webapp/compass-hidden, so Lift won't serve your SCSS files, but the actual CSS is copied to webapp/css and images to webapp/images. You can always change webapp/compass-hidden/config.rb to suit.
+
+*Note:* If you do use compass.app, you have to navigate to the webapp folder (the parent folder of compass-hidden), then save a new project with the name compass-hidden. It will generate the sub-folders and respect the settings in config.rb :-)
+
+*Have even more fun!*
