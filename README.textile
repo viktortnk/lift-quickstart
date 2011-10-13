@@ -1,0 +1,21 @@
+h1. README for Tim's fork of lift-quickstart
+
+This is a fork of the fantastic "lift-quickstart":https://github.com/lacy/lift-quickstart project.
+
+The project uses "xsbt 0.11":https://github.com/harrah/xsbt ,the "xsbt-web-plugin":https://github.com/siasia/xsbt-web-plugin, and the "sbteclipse":https://github.com/typesafehub/sbteclipse plugin to get a project using Lift 2.4-M4 running quickly.
+
+When I cloned and ran the project, I found that changes to the plugins meant that - at least on my machine - sbt was unable to run the project without stopping due to errors, so I forked the project and updated the build.sbt and plugins.sbt, according to the instructions on the various component help pages.
+
+To use this for your project, grab a copy, rename the lift-quickstart folder to _myProjectName_, change your project name in build.sbt and add any further dependencies or options as required, making sure to follow the new formats used by sbt 0.11.
+
+If you haven't downloaded sbt 0.11, then do so from "here":https://github.com/harrah/xsbt/wiki/Setup, and set it up so that it runs on the path (or place the jar and shell script in your project folder).
+
+Then, make sure you don't have anything in ~/.sbt (in my experience it tends to break things - your mileage may vary!).
+
+Finally, in the root of your project folder run _sbt_ and get jetty running using _container:start_
+
+To generate Eclipse project files use _eclipse_
+
+*Have fun!*
+
+
