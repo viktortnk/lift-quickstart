@@ -2,9 +2,6 @@ name := "lift-quickstart"
  
 seq(webSettings: _*)
 
-// If using JRebel, edit your sbt launch script or batch file and add before -jar:
-//-noverify -javaagent:/path/to/jrebel.jar
-//then uncomment the next line
 //scanDirectories in Compile := Nil
 
 resolvers += "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"
