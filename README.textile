@@ -6,13 +6,13 @@ The project uses "xsbt 0.11":https://github.com/harrah/xsbt ,the "xsbt-web-plugi
 
 When I cloned and ran the project, I found that changes to the plugins meant that - at least on my machine - sbt was unable to run the project without stopping due to errors, so I forked the project and updated the build.sbt and plugins.sbt, according to the instructions on the various component help pages.
 
-To use this for your project, grab a copy, rename the lift-quickstart folder to _myProjectName_, change your project name in build.sbt and add any further dependencies or options as required, making sure to follow the new formats used by sbt 0.11.
+To use this for your project, grab a copy, rename the lift-quickstart folder to _myProjectName_, change your project name in build.sbt and add any further dependencies or options as required, making sure to follow the new format used by sbt 0.11.
 
 If you haven't downloaded sbt 0.11, then do so from "here":https://github.com/harrah/xsbt/wiki/Setup, and set it up so that it runs on the path (or place the jar and shell script in your project folder).
 
 Then, make sure you don't have anything in ~/.sbt (in my experience it tends to break things - your mileage may vary!).
 
-Finally, in the root of your project folder run _sbt_ and get jetty running using _container:start_
+Finally, in the root of your project folder run _sbt_ and get jetty running using _~container:start_
 
 To generate Eclipse project files use _eclipse_
 
@@ -20,10 +20,20 @@ To generate Eclipse project files use _eclipse_
 
 h2. Update - added Compass CSS support
 
-In my projects, I often use "Compass":http://www.compass-style.org, so I've added the option to the quickstart project. Use the compass command line or compass.app to generate the files to your taste. However, I've included a config.rb files with some sensible defaults. 
+In my projects, I often use "Compass":http://www.compass-style.org, so I've added the option to the quickstart project. Use the compass command line or compass.app to generate the files to your taste. However, I've included a config.rb file with some sensible defaults. 
 
 The compass files are stored in webapp/compass-hidden, so Lift won't serve your SCSS files, but the actual CSS is copied to webapp/css and images to webapp/images. You can always change webapp/compass-hidden/config.rb to suit.
 
 *Note:* If you do use compass.app, you have to navigate to the webapp folder (the parent folder of compass-hidden), then save a new project with the name compass-hidden. It will generate the sub-folders and respect the settings in config.rb :-)
 
 *Have even more fun!*
+
+h2. Update - JRebel support
+
+After reading "this discussion":http://groups.google.com/group/liftweb/browse_thread/thread/dfd4e26678f7418e on the Lift mailing list, I had a quick play about with JRebel, and updated build.sbt with what *I think* is the correct setting (thanks to Ján Raska for pointing this out).
+
+The setting for JRebel is commented out by default, so for those using JRebel, edit build.sbt in the project's root folder and uncomment the appropriate line. You will also need to modify your sbt shell script or batch file (as mentioned "here":http://paulfulleruk.blogspot.com/2010/10/using-jrebel-with-sbt.html), adding to the Java VM arguments before _-jar_:
+
+_-noverify -javaagent:/path/to/jrebel.jar_
+
+It seems to work fine for me...as always, your mileage may vary :-)
