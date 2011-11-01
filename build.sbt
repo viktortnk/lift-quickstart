@@ -2,7 +2,7 @@ name := "lift-quickstart"
  
 seq(webSettings: _*)
 
-//scanDirectories in Compile := Nil
+// scanDirectories in Compile := Nil
 
 resolvers += "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"
 
@@ -13,8 +13,7 @@ resolvers += "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshot
 libraryDependencies ++= {
   val liftVersion = "2.4-M4" // Put the current/latest lift version here
   Seq(
-    "net.liftweb" %% "lift-webkit" % liftVersion % "compile->default",
-    "net.liftweb" %% "lift-mapper" % liftVersion % "compile->default"
+    "net.liftweb" %% "lift-webkit" % liftVersion % "compile->default"
     )
 }
 

@@ -5,14 +5,15 @@
     <title>Home</title>
   </head>
   <body class="lift:content_id=main">
-    <div id="main" class="lift:surround?with=default;at=content">
-      <h2>Welcome to your project!</h2>
-      <p>
-	<span class="lift:helloWorld.howdy">
-	  Welcome to your Lift app at <span id="time">Time goes here</span>
-	</span>
-      </p>
+    <div id="main" class="lift:surround?with=default&at=content">
+      <div>
+        Hi, I'm a page that contains the time:
+        <span class="lift:TimeNow">??? some time</span>.
+      </div>
+
+      <div>
+        And a button: <button class="lift:ClickMe">Click Me</button>.
+      </div>
     </div>
   </body>
 </html>
-
