@@ -19,10 +19,7 @@ libraryDependencies ++= {
 
 // Customize any further dependencies as desired
 libraryDependencies ++= Seq(
-  "org.eclipse.jetty" % "jetty-webapp" % "8.0.3.v20111011" % "container, test", // For Jetty 8
-  "org.scala-tools.testing" %% "specs" % "1.6.9" % "test->default", // For specs.org tests
-  "junit" % "junit" % "4.8" % "test->default", // For JUnit 4 testing
-  "javax.servlet" % "servlet-api" % "2.5" % "provided->default",
-  "com.h2database" % "h2" % "1.2.138", // In-process database, useful for development systems
-  "ch.qos.logback" % "logback-classic" % "0.9.30" % "compile->default" // Logging
+  "org.eclipse.jetty" % "jetty-webapp" % "8.0.3.v20111011" % "container, test", 
+  // "com.h2database" % "h2" % "1.2.138",
+  "ch.qos.logback" % "logback-classic" % "0.9.30" % "compile->default"
 )
