@@ -30,7 +30,7 @@ object LiftProjectBuild extends Build {
       "Java.net Maven2 Repository" at "http://download.java.net/maven/2/"),
     
     libraryDependencies ++= {
-	  val liftVersion = "2.4-M5"
+	  val liftVersion = "2.4"
 	  Seq(
 	    "net.liftweb" %% "lift-webkit" % liftVersion % "compile",
 	    "org.eclipse.jetty" % "jetty-webapp" % "7.5.4.v20111024" % "container",
@@ -47,3 +47,4 @@ object LiftProjectBuild extends Build {
     testOptions in Test += Tests.Argument("-oF")
   )
 }
+
