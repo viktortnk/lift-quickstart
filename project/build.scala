@@ -15,7 +15,8 @@ object LiftProjectBuild extends Build {
   
   def yourWebSettings = webSettings ++ Seq(
     // If you are use jrebel
-    scanDirectories in Compile := Nil
+    scanDirectories in Compile := Nil,
+    port in container.Configuration := 8080
     )
   
   lazy val liftQuickstart = Project(
